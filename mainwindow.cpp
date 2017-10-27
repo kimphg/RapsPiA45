@@ -44,25 +44,20 @@ void MainWindow::ProcessSerialData()
         serialData.append(serialPort.readAll());
         QStringList listMsg = serialData.split("$");
         foreach ( QString str, listMsg) {
-            if(str.left(4) == "KTTB")
-            {
-                if(str.size()<13)continue;
-                QString substr = str.right(9);
-                if(substr=="100000000")
-                {
+            ui->textBrowser->append(str);
+//            if(str.left(4) == "KTTB")
+//            {
+//                if(str.size()<13)continue;
+//                QString substr = str.right(9);
+//                if(substr=="100000000")
+//                {
 
-                }
-                else if(substr=="100000000")
-                {
-                    1. Nguồn +5V
-                    2. nguồn +12.6V
-                    3. Nguồn + 20V
-                    4. Nguồn +27V
+//                }
+//                else if(substr=="100000000")
+//                {
 
-                    5. NGuồn : - 12.6V
-                    6. Nguồn  : - 20V
-                }
-            }
+//                }
+//            }
         }
     }
 }
