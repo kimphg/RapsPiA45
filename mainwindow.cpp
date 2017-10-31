@@ -31,8 +31,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
         }
     }
+    startTimer(1000);
 }
+void MainWindow::timerEvent(QTimerEvent *event)
+{
 
+    ProcessData("$KTTB,100000000,");
+}
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -42,9 +47,30 @@ void MainWindow::ProcessSerialData()
     if(serialPort.isOpen())
     {
         serialData.append(serialPort.readAll());
-        QStringList listMsg = serialData.split("$");
-        foreach ( QString str, listMsg) {
-            ui->textBrowser->append(str);
+        ProcessData(serialData);
+    }
+}
+void MainWindow::ProcessData(QString data)
+{
+    QStringList listMsg = data.split("$");
+    foreach ( QString str, listMsg) {
+        ui->textBrowser->append(str);
+        QStringList msgContent = str.split(',');
+        if(msgContent.at(0)=="KTTB")
+        {
+            this->ui->tabWidget->setCurrentIndex(0);
+
+        }
+        if(msgContent.at(1)=="100000000"){ui->label_message->setText("Kiểm tra thiết bị trước khi sử dụng");}
+        else if (msgContent.at(1)=="2A"){ui->label_2a->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="2B"){ui->label_2b->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="2C"){ui->label_2c->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="2D"){ui->label_2d->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="2E"){ui->label_2e->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="2F"){ui->label_2f->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="2F"){ui->label_2f->setText(msgContent.at(2));}
+        else if (msgContent.at(1)=="300000000"){ui->label_message->setText("Kiểm tra thiết bị xong, hãy chọn chế độ BA/Máy lái");}
+        //“300000000”
 //            if(str.left(4) == "KTTB")
 //            {
 //                if(str.size()<13)continue;
@@ -58,7 +84,6 @@ void MainWindow::ProcessSerialData()
 
 //                }
 //            }
-        }
     }
 }
 bool MainWindow::openSerial(const QString &port, qint32 baudRate)

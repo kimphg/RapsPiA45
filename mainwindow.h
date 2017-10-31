@@ -17,10 +17,12 @@ public:
     QSerialPort serialPort;
 private slots:
     void ProcessSerialData();
+    void timerEvent(QTimerEvent *event);
 private:
     Ui::MainWindow *ui;
     QString serialData;
     bool openSerial(const QString &port, qint32 baudRate);
+    void ProcessData(QString data);
 };
 
 #endif // MAINWINDOW_H
