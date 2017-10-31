@@ -33,10 +33,21 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     startTimer(1000);
 }
+int command = 0;
 void MainWindow::timerEvent(QTimerEvent *event)
 {
+    command++;
+    switch (command) {
+    case 1:
+        ProcessData("$KTTB,100000000,");
+        break;
+    case 2:
+        ProcessData("$KTTB,100000000,");
+        break;
+    default:
+        break;
+    }
 
-    ProcessData("$KTTB,100000000,");
 }
 MainWindow::~MainWindow()
 {
