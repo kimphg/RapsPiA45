@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     this->showFullScreen();
+    ui->tabWidget->tabBar()->hide();
     QList<QSerialPortInfo> portList = QSerialPortInfo::availablePorts();
     foreach (QSerialPortInfo port, portList) {
         printf("\nport:");
