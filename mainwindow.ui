@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>990</width>
-    <height>794</height>
+    <width>1249</width>
+    <height>883</height>
    </rect>
   </property>
   <property name="font">
@@ -29,7 +29,7 @@
      <widget class="QTabWidget" name="tabWidget">
       <property name="font">
        <font>
-        <pointsize>10</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="autoFillBackground">
@@ -38,14 +38,14 @@
       <property name="styleSheet">
        <string notr="true">background-color:  rgb(150, 220, 225);
 border-style: inset;
-border-width: 3px;
+border-width: 2px;
 border-color: rgb(120, 190, 200);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
-       <enum>Qt::ElideNone</enum>
+       <enum>Qt::ElideLeft</enum>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -59,7 +59,7 @@ border-color: rgb(120, 190, 200);</string>
       <property name="movable">
        <bool>false</bool>
       </property>
-      <property name="tabBarAutoHide">
+      <property name="tabBarAutoHide" stdset="0">
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab">
@@ -73,7 +73,7 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_6">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="text">
@@ -85,8 +85,11 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_2a">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>--</string>
@@ -97,7 +100,7 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_7">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="text">
@@ -109,8 +112,11 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_2b">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>--</string>
@@ -121,7 +127,7 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_8">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="text">
@@ -133,8 +139,11 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_2c">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>--</string>
@@ -145,7 +154,7 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_9">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="text">
@@ -157,8 +166,11 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_2d">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>--</string>
@@ -169,7 +181,7 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_10">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="text">
@@ -181,8 +193,11 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_2e">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>--</string>
@@ -193,7 +208,7 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_11">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
             </property>
             <property name="text">
@@ -205,8 +220,11 @@ border-color: rgb(120, 190, 200);</string>
            <widget class="QLabel" name="label_2f">
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <pointsize>14</pointsize>
              </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>--</string>
@@ -220,12 +238,12 @@ border-color: rgb(120, 190, 200);</string>
           <property name="maximumSize">
            <size>
             <width>16777215</width>
-            <height>100</height>
+            <height>50</height>
            </size>
           </property>
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
          </widget>
@@ -234,7 +252,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_12">
           <property name="font">
            <font>
-            <pointsize>15</pointsize>
+            <pointsize>14</pointsize>
            </font>
           </property>
           <property name="text">
@@ -254,6 +272,11 @@ border-color: rgb(120, 190, 200);</string>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="5" column="1">
          <widget class="QLabel" name="label_badm_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -261,6 +284,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="5" column="2">
          <widget class="QLabel" name="label_bacp_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -270,7 +298,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_2">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -283,6 +311,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="6" column="0">
          <widget class="QLabel" name="label_19">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>3. БПГ </string>
           </property>
@@ -290,6 +323,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="6" column="1">
          <widget class="QLabel" name="label_badm_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -297,6 +335,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="6" column="2">
          <widget class="QLabel" name="label_bacp_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0.6</string>
           </property>
@@ -304,6 +347,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="7" column="0">
          <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>4. Работа по земле</string>
           </property>
@@ -311,6 +359,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="7" column="1">
          <widget class="QLabel" name="label_badm_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -318,6 +371,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="7" column="2">
          <widget class="QLabel" name="label_bacp_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -325,6 +383,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="9" column="0">
          <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>5. HB</string>
           </property>
@@ -332,6 +395,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="9" column="1">
          <widget class="QLabel" name="label_badm_5">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -339,6 +407,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="9" column="2">
          <widget class="QLabel" name="label_bacp_5">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -346,6 +419,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="11" column="0">
          <widget class="QLabel" name="label_20">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>6. Откл.РВ</string>
           </property>
@@ -353,6 +431,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="11" column="1">
          <widget class="QLabel" name="label_39">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -360,6 +443,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="11" column="2">
          <widget class="QLabel" name="label_bacp_6">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -409,6 +497,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1. Пуск</string>
           </property>
@@ -416,6 +509,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="4" column="1">
          <widget class="QLabel" name="label_badm_1">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -423,6 +521,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="4" column="2">
          <widget class="QLabel" name="label_bacp_1">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -432,7 +535,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_1">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -445,6 +548,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_18">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>2. Пуск</string>
           </property>
@@ -452,6 +560,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="13" column="0">
          <widget class="QLabel" name="label_21">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>7. Откл.РВ</string>
           </property>
@@ -459,6 +572,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="13" column="1">
          <widget class="QLabel" name="label_badm_7">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -466,6 +584,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="13" column="2">
          <widget class="QLabel" name="label_bacp_7">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -473,6 +596,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="15" column="0">
          <widget class="QLabel" name="label_22">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>8. ПИМ</string>
           </property>
@@ -480,6 +608,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="15" column="1">
          <widget class="QLabel" name="llabel_badm_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>&gt;18</string>
           </property>
@@ -487,6 +620,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="15" column="2">
          <widget class="QLabel" name="label_bacp_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -494,6 +632,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="17" column="0">
          <widget class="QLabel" name="label_23">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>9. КДЦ </string>
           </property>
@@ -501,6 +644,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="17" column="1">
          <widget class="QLabel" name="label_badm_9">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -508,6 +656,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="17" column="2">
          <widget class="QLabel" name="label_bacp_9">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -515,6 +668,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="19" column="0">
          <widget class="QLabel" name="label_24">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>10. B2</string>
           </property>
@@ -522,6 +680,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="19" column="1">
          <widget class="QLabel" name="label_badm_10">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -529,6 +692,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="19" column="2">
          <widget class="QLabel" name="label_bacp_10">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0.3</string>
           </property>
@@ -536,6 +704,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="21" column="0">
          <widget class="QLabel" name="label_25">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>11. Chuyển mạch nguồn ±12,6 V</string>
           </property>
@@ -543,6 +716,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="21" column="1">
          <widget class="QLabel" name="label_badm_11">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>12.6</string>
           </property>
@@ -550,6 +728,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="21" column="2">
          <widget class="QLabel" name="label_bacp_11">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0.6</string>
           </property>
@@ -557,6 +740,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="23" column="0">
          <widget class="QLabel" name="label_26">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>12. Chuyển mạch nguồn ±20 V cho đầu tự dẫn</string>
           </property>
@@ -564,6 +752,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="23" column="1">
          <widget class="QLabel" name="label_badm_12">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>20</string>
           </property>
@@ -571,6 +764,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="23" column="2">
          <widget class="QLabel" name="label_bacp_12">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -578,6 +776,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="25" column="0">
          <widget class="QLabel" name="label_27">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>13. Chuyển mạch tải theo mạch + 20 V</string>
           </property>
@@ -585,6 +788,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="25" column="1">
          <widget class="QLabel" name="label_badm_13">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>20</string>
           </property>
@@ -592,6 +800,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="25" column="2">
          <widget class="QLabel" name="label_bacp_13">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -599,6 +812,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="27" column="0">
          <widget class="QLabel" name="label_28">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>14. Chuyển mạch nguồn +27V vào khối nguồn</string>
           </property>
@@ -606,6 +824,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="27" column="1">
          <widget class="QLabel" name="label_badm_14">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>27</string>
           </property>
@@ -613,6 +836,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="27" column="2">
          <widget class="QLabel" name="label_bacp_14">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -620,6 +848,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="29" column="0">
          <widget class="QLabel" name="label_29">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>15. Chuyển mạch nguồn -27 V cho đầu tự dẫn</string>
           </property>
@@ -627,6 +860,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="29" column="1">
          <widget class="QLabel" name="label_badm_15">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>-27</string>
           </property>
@@ -634,6 +872,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="29" column="2">
          <widget class="QLabel" name="label_bacp_15">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.3</string>
           </property>
@@ -643,7 +886,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_3">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -658,7 +901,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_4">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -673,7 +916,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_5">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -688,7 +931,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_6">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -703,7 +946,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_7">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -718,7 +961,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_8">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -733,7 +976,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_9">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -748,7 +991,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_10">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -763,7 +1006,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_11">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -778,7 +1021,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_12">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -793,7 +1036,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_13">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -808,7 +1051,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_14">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -823,7 +1066,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_15">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -852,7 +1095,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakq_16">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -865,6 +1108,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="0" column="0" rowspan="2" colspan="5">
          <widget class="QFrame" name="frame">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">border-width :0px;</string>
           </property>
@@ -885,7 +1133,7 @@ border-color: rgb(120, 190, 200);</string>
               </font>
              </property>
              <property name="text">
-              <string>Tên SP: Khối BA</string>
+              <string>Tên SP : Khối BA</string>
              </property>
             </widget>
            </item>
@@ -899,7 +1147,7 @@ border-color: rgb(120, 190, 200);</string>
               </font>
              </property>
              <property name="text">
-              <string>Số hiệu SP:</string>
+              <string>Số hiệu SP :</string>
              </property>
             </widget>
            </item>
@@ -933,7 +1181,7 @@ border-color: rgb(120, 190, 200);</string>
               </font>
              </property>
              <property name="text">
-              <string>Ngày kiểm tra:</string>
+              <string>Ngày kiểm tra :</string>
              </property>
             </widget>
            </item>
@@ -958,7 +1206,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_1">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -973,7 +1221,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_2">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -988,7 +1236,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_3">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1003,7 +1251,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_4">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1018,7 +1266,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_5">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1033,7 +1281,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_6">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1048,7 +1296,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_7">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1063,7 +1311,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_8">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1078,7 +1326,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_9">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1093,7 +1341,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_10">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1108,7 +1356,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_11">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1123,7 +1371,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_12">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1138,7 +1386,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_13">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1153,7 +1401,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_14">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1168,7 +1416,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_bakl_15">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -1188,6 +1436,11 @@ border-color: rgb(120, 190, 200);</string>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="11" column="1">
          <widget class="QLabel" name="label_68">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1195,6 +1448,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="11" column="2">
          <widget class="QLabel" name="label_69">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1204,7 +1462,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_10">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1222,7 +1480,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_10">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1238,6 +1496,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="9" column="0">
          <widget class="QLabel" name="label_47">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Giới hạn lớn nhất của cánh lái sang phải K2</string>
           </property>
@@ -1245,6 +1508,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="10" column="0">
          <widget class="QLabel" name="label_48">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Sai số không ở chế độ điều khiển Sigma.упр1</string>
           </property>
@@ -1252,6 +1520,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="2" column="1">
          <widget class="QLabel" name="label_49">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1259,6 +1532,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="3" column="1">
          <widget class="QLabel" name="label_50">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1266,6 +1544,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="4" column="1">
          <widget class="QLabel" name="label_51">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1273,6 +1556,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="5" column="1">
          <widget class="QLabel" name="label_52">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1280,6 +1568,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="6" column="1">
          <widget class="QLabel" name="label_53">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>4.0</string>
           </property>
@@ -1287,6 +1580,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="7" column="1">
          <widget class="QLabel" name="label_54">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>4.0</string>
           </property>
@@ -1294,6 +1592,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="8" column="1">
          <widget class="QLabel" name="label_55">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>4.0</string>
           </property>
@@ -1301,6 +1604,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="2" column="2">
          <widget class="QLabel" name="label_58">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1308,6 +1616,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="9" column="1">
          <widget class="QLabel" name="label_56">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1315,6 +1628,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="10" column="1">
          <widget class="QLabel" name="label_57">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>0</string>
           </property>
@@ -1322,6 +1640,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="3" column="2">
          <widget class="QLabel" name="label_59">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1329,6 +1652,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="4" column="2">
          <widget class="QLabel" name="label_60">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.5</string>
           </property>
@@ -1336,6 +1664,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="5" column="2">
          <widget class="QLabel" name="label_61">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.5</string>
           </property>
@@ -1343,6 +1676,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="6" column="2">
          <widget class="QLabel" name="label_62">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1350,6 +1688,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="7" column="2">
          <widget class="QLabel" name="label_63">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1357,6 +1700,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="8" column="2">
          <widget class="QLabel" name="label_64">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1364,6 +1712,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="9" column="2">
          <widget class="QLabel" name="label_65">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1371,6 +1724,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="10" column="2">
          <widget class="QLabel" name="label_66">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>1.0</string>
           </property>
@@ -1378,6 +1736,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="11" column="0">
          <widget class="QLabel" name="label_67">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Sai số không ở chế độ điều khiển Sigma.упр2</string>
           </property>
@@ -1387,7 +1750,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_1">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1405,7 +1768,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_2">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1423,7 +1786,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_3">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1441,7 +1804,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_4">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1459,7 +1822,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_5">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1477,7 +1840,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_6">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1495,7 +1858,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_7">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1513,7 +1876,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_8">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1531,7 +1894,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_5">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1549,7 +1912,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_6">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1567,7 +1930,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_7">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1585,7 +1948,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_8">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1603,7 +1966,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_9">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1619,6 +1982,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="2" column="0">
          <widget class="QLabel" name="label_40">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Điện áp quy không cánh lái НПР1</string>
           </property>
@@ -1626,6 +1994,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="3" column="0">
          <widget class="QLabel" name="label_41">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Điện áp quy không cánh lái НПР2</string>
           </property>
@@ -1633,6 +2006,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="4" column="0">
          <widget class="QLabel" name="label_42">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Sai số vị trí không của cánh lái K1</string>
           </property>
@@ -1640,6 +2018,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="5" column="0">
          <widget class="QLabel" name="label_43">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Sai số vị trí không của cánh lái K2</string>
           </property>
@@ -1647,6 +2030,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="6" column="0">
          <widget class="QLabel" name="label_44">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Giới hạn lớn nhất của cánh lái sang trái K1</string>
           </property>
@@ -1654,6 +2042,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="7" column="0">
          <widget class="QLabel" name="label_45">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Giới hạn lớn nhất của cánh lái sang phải K1</string>
           </property>
@@ -1661,6 +2054,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="8" column="0">
          <widget class="QLabel" name="label_46">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Giới hạn lớn nhất của cánh lái sang trái K2</string>
           </property>
@@ -1670,7 +2068,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_4">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1688,7 +2086,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_3">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1706,7 +2104,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl_2">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1724,7 +2122,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_9">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1742,7 +2140,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_38">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -1759,7 +2157,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_37">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -1776,7 +2174,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_36">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -1793,7 +2191,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -1810,7 +2208,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkl">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -1827,7 +2225,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_1">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1845,7 +2243,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_mlkq_11">
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="autoFillBackground">
@@ -1863,7 +2261,7 @@ border-color: rgb(120, 190, 200);</string>
          <widget class="QLabel" name="label_74">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <pointsize>16</pointsize>
             <weight>75</weight>
             <bold>true</bold>
            </font>
@@ -1875,6 +2273,11 @@ border-color: rgb(120, 190, 200);</string>
         </item>
         <item row="0" column="0" colspan="5">
          <widget class="QFrame" name="frame_3">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">border-width :0px;</string>
           </property>
@@ -1889,13 +2292,13 @@ border-color: rgb(120, 190, 200);</string>
             <widget class="QLabel" name="label_81">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>16</pointsize>
                <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
              <property name="text">
-              <string>Tên SP: Khối máy lái</string>
+              <string>Tên SP :  Khối máy lái</string>
              </property>
             </widget>
            </item>
@@ -1903,13 +2306,13 @@ border-color: rgb(120, 190, 200);</string>
             <widget class="QLabel" name="label_82">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>16</pointsize>
                <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
              <property name="text">
-              <string>Số hiệu SP:</string>
+              <string>Số hiệu SP :</string>
              </property>
             </widget>
            </item>
@@ -1917,7 +2320,7 @@ border-color: rgb(120, 190, 200);</string>
             <widget class="QLabel" name="label_83">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>16</pointsize>
                <weight>75</weight>
                <bold>true</bold>
               </font>
@@ -1937,13 +2340,13 @@ border-color: rgb(120, 190, 200);</string>
             <widget class="QLabel" name="label_84">
              <property name="font">
               <font>
-               <pointsize>12</pointsize>
+               <pointsize>16</pointsize>
                <weight>75</weight>
                <bold>true</bold>
               </font>
              </property>
              <property name="text">
-              <string>Ngày kiểm tra:</string>
+              <string>Ngày kiểm tra :</string>
              </property>
             </widget>
            </item>
@@ -1964,14 +2367,16 @@ border-color: rgb(120, 190, 200);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>12</pointsize>
+        <pointsize>24</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(200, 100, 30);</string>
+      </property>
       <property name="text">
-       <string>Nhà máy A45 - Cục Kỹ thuật PKKQ
-</string>
+       <string>Nhà máy A45 - Cục Kỹ thuật - Quân chủng PKKQ</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1986,16 +2391,22 @@ border-color: rgb(120, 190, 200);</string>
         <height>50</height>
        </size>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>100</height>
+       </size>
+      </property>
       <property name="font">
        <font>
-        <pointsize>10</pointsize>
+        <pointsize>12</pointsize>
        </font>
       </property>
       <property name="text">
        <string>--</string>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
      </widget>
     </item>

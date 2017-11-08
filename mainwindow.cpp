@@ -11,8 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->showFullScreen();
+
     ui->tabWidget->tabBar()->hide();
+    this->showFullScreen();
     QList<QSerialPortInfo> portList = QSerialPortInfo::availablePorts();
     foreach (QSerialPortInfo port, portList) {
         printf("\nport:");
@@ -25,11 +26,13 @@ MainWindow::MainWindow(QWidget *parent) :
         if(!openSerial(portname,9600))
         {
             printf("\nSerial port fail");
+            QApplication::quit();
         }
         else
         {
             WriteSerial("$PC100");
             printf("\nSerial port active:");
+            //fflushall();
             printf(portname.toStdString().data());
             connect(&serialPort, SIGNAL(readyRead()), this, SLOT(ProcessSerialData()));
             WriteSerial("$PC100");
@@ -71,20 +74,33 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     if(key == Qt::Key_Space)
     {
         startTimer(1000);
+        command = 0;
+    }
+    if(key == Qt::Key_1)
+    {
+        ui->tabWidget->setCurrentIndex(0);
+    }
+    if(key == Qt::Key_2)
+    {
+        ui->tabWidget->setCurrentIndex(1);
+    }
+    if(key == Qt::Key_3)
+    {
+        ui->tabWidget->setCurrentIndex(2);
     }
 
 }
 void MainWindow::captureScreen()
 {
     QScreen *screen = QGuiApplication::primaryScreen();
-       if (const QWindow *window = windowHandle())
-           screen = window->screen();
-       if (!screen)
-           return;
-           QApplication::beep();
+    if (const QWindow *window = windowHandle())
+        screen = window->screen();
+    if (!screen)
+        return;
+    QApplication::beep();
 
-       QPixmap originalPixmap = screen->grabWindow(0);
-       originalPixmap.save("screen.png");
+    QPixmap originalPixmap = screen->grabWindow(0);
+    originalPixmap.save("screen.png");
 }
 void MainWindow::timerEvent(QTimerEvent *event)
 {
@@ -258,7 +274,7 @@ void MainWindow::ProcessData(QString data)
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
         bool result = (abs(tesResult.value(keyname)
-                            -tesResult.value(keyname+"dm"))
+                           -tesResult.value(keyname+"dm"))
                        - tesResult.value(keyname+"ss"))
                 <=0;
         if(result)
@@ -302,10 +318,10 @@ void MainWindow::ProcessData(QString data)
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
         double a= tesResult.value(keyname);
-               a=tesResult.value(keyname+"dm");
-           a= tesResult.value(keyname+"ss");
+        a=tesResult.value(keyname+"dm");
+        a= tesResult.value(keyname+"ss");
         bool result = (abs(tesResult.value(keyname)
-                            -tesResult.value(keyname+"dm"))
+                           -tesResult.value(keyname+"dm"))
                        - tesResult.value(keyname+"ss"))
                 <=0;
         if(result)
@@ -326,6 +342,62 @@ void MainWindow::ProcessData(QString data)
             labelKl->setText("Không đạt");
             labelKl->setStyleSheet("QLabel { background-color : red; }");
         }
+    }
+    else if (msgContent.at(0)=="$IDMS")
+    {
+        if(msgContent.at(1)=="1")
+        {
+            ui->label_message->setText("Hãy chọn KIỂM TRA THIẾT BỊ trước khi sử dụng");
+        }
+        else if(msgContent.at(1)=="2")
+        {
+            ui->label_message->setText("Kiểm tra Thiết bị xong!");
+        }
+        else if(msgContent.at(1)=="3")
+        {
+            ui->label_message->setText("Hãy bấm TIẾP TỤC để thiết lập chế độ kiểm tra");
+        }
+        else if(msgContent.at(1)=="3")
+        {
+            ui->label_message->setText("Hãy bấm TIẾP TỤC để thiết lập chế độ kiểm tra");
+        }
+        else if(msgContent.at(1)=="4")
+        {
+            ui->label_message->setText("Hãy chọn CHẾ ĐỘ và THIẾT BỊ cần kiểm tra");
+        }
+        else if(msgContent.at(1)=="5")
+        {
+            ui->label_message->setText("Đang chọn BA - TỰ ĐỘNG. Hãy bấm TIẾP TỤC để xác nhận");
+        }
+        else if(msgContent.at(1)=="6")
+        {
+            ui->label_message->setText("Đang chọn BA - TỪNG BƯỚC. Hãy bấm TIẾP TỤC để xác nhận");
+        }
+        else if(msgContent.at(1)=="7")
+        {
+            ui->label_message->setText("Đang chọn MÁY LÁI - TỰ ĐỘNG. Hãy bấm TIẾP TỤC để xác nhận");
+        }
+        else if(msgContent.at(1)=="8")
+        {
+            ui->label_message->setText("Đang chọn MÁY LÁI - TỪNG BƯỚC. Hãy bấm TIẾP TỤC để xác nhận");
+        }
+        else if(msgContent.at(1)=="9")
+        {
+            ui->label_message->setText("Hãy bấm BẮT ĐẦU để thực hiện đo");
+        }
+        else if(msgContent.at(1)=="10")
+        {
+            ui->label_message->setText("Hãy bấm XÓA để đo lại. TIẾP TỤC để chuyển tham số");
+        }
+        else if(msgContent.at(1)=="11")
+        {
+            ui->label_message->setText("Đã thực hiện XONG! Bấm TIẾP TỤC để đo thiết bị khác!");
+        }
+        else if(msgContent.at(1)=="12")ui->label_message->setText("Đã DỪNG! Bấm TIẾP TỤC để tiếp tục.");
+        else if(msgContent.at(1)=="13")ui->label_message->setText("Hãy bấm BẮT ĐẦU");
+        else if(msgContent.at(1)=="14")ui->label_message->setText("Hãy bấm TIẾP TỤC");
+        else if(msgContent.at(1)=="15")ui->label_message->setText("Hãy bấm DỪNG");
+        else if(msgContent.at(1)=="16")ui->label_message->setText("Hãy bấm XÓA");
     }
 
 }
