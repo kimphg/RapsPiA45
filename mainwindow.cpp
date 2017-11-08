@@ -26,11 +26,12 @@ MainWindow::MainWindow(QWidget *parent) :
         if(!openSerial(portname,9600))
         {
             printf("\nSerial port fail");
-            QApplication::quit();
+
         }
         else
         {
             WriteSerial("$PC100");
+            ui->label_message->setText(portname);
             printf("\nSerial port active:");
             //fflushall();
             printf(portname.toStdString().data());
@@ -71,22 +72,26 @@ int command = 0;
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     int key = event->key();
-    if(key == Qt::Key_Space)
+    if(key == Qt::Key_S)
     {
         startTimer(1000);
         command = 0;
     }
-    if(key == Qt::Key_1)
+    else if(key == Qt::Key_1)
     {
         ui->tabWidget->setCurrentIndex(0);
     }
-    if(key == Qt::Key_2)
+    else if(key == Qt::Key_2)
     {
         ui->tabWidget->setCurrentIndex(1);
     }
-    if(key == Qt::Key_3)
+    else if(key == Qt::Key_3)
     {
         ui->tabWidget->setCurrentIndex(2);
+    }
+    else if(key == Qt::Key_F1)
+    {
+        captureScreen();
     }
 
 }
@@ -107,33 +112,33 @@ void MainWindow::timerEvent(QTimerEvent *event)
     command++;
     switch (command) {
     case 1:
-        ProcessData("$KTTB,100,000000,");
+        ProcessData("$KTTB,100,000000,*");
         break;
     case 2:
-        ProcessData("$TBBA,100,000000,");//BA san sang
+        ProcessData("$TBBA,100,000000,*");//BA san sang
         break;
     case 3:
         break;
     case 4:
-        ProcessData("$SUTB,100,,");//tham so BA 1
+        ProcessData("$SUTB,100,,*");//tham so BA 1
         break;
     case 5:
-        ProcessData("$SUTB,211,,");//tham so BA 1
+        ProcessData("$SUTB,211,,*");//tham so BA 1
         break;
     case 6:
-        ProcessData("$TBBA,2A,+15.0,");//tham so BA 1
+        ProcessData("$TBBA,2A,+15.0,*");//tham so BA 1
         break;//
     case 7:
-        ProcessData("$TBBA,2B,+26.0,");//tham so BA 2
+        ProcessData("$TBBA,2B,+26.0,*");//tham so BA 2
         break;
     case 8:
         captureScreen();
         break;
     case 9:
-        ProcessData("$TBML,100,000,");//tham so BA 2
+        ProcessData("$TBML,100,000,*");//tham so BA 2
         break;
     case 10:
-        ProcessData("$TBML,2A,-20,");//tham so BA 2
+        ProcessData("$TBML,2A,-20,*");//tham so BA 2
         break;
     default:
         killTimer(event->timerId());
@@ -150,16 +155,27 @@ void MainWindow::ProcessSerialData()
 {
     if(serialPort.isOpen())
     {
-        serialData = QString(serialPort.readAll());
-        ProcessData(serialData);
+
+
+        serialData.append(serialPort.readAll());
+        if(ProcessData(serialData))serialData.clear();
+
     }
 }
-void MainWindow::ProcessData(QString data)
+bool MainWindow::ProcessData(QString data)
 {
-    while(data.at(0)!= '$')data.remove(0,1);
-    ui->textBrowser->append(data);
+    if(!data.length())return false;
+    while(data.at(0)!= '$')
+    {
+        data.remove(0,1);
+        if(!data.length())return false;
+    }
+    //test ok
     QStringList msgContent = data.split(',');
-    if(msgContent.size()<3)return;
+    if(msgContent.size()<2)return false;
+    if(!msgContent.at(msgContent.size()-1).contains('*'))return false;
+    ui->textBrowser->append(data);
+
     if(msgContent.at(0)=="$KTTB")
     {
         this->ui->tabWidget->setCurrentIndex(0);
@@ -189,8 +205,7 @@ void MainWindow::ProcessData(QString data)
         this->ui->tabWidget->setCurrentIndex(1);
         QLabel* labelKq,*labelKl;
         tesResult.insert(msgContent.at(0)+msgContent.at(1),msgContent.at(2).toDouble());
-        if(msgContent.at(1)=="100")     {ui->label_message->setText("BA sẵn sàng");
-            return;}
+        if(msgContent.at(1)=="100")     {ui->label_message->setText("BA sẵn sàng");return true;}
 
         else if(msgContent.at(1)=="2A")
         {
@@ -269,7 +284,7 @@ void MainWindow::ProcessData(QString data)
         }
         else
         {
-            return;
+            return false;
         }
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
@@ -303,7 +318,7 @@ void MainWindow::ProcessData(QString data)
         this->ui->tabWidget->setCurrentIndex(2);
         QLabel* labelKq,*labelKl;
         tesResult.insert(msgContent.at(0)+msgContent.at(1),msgContent.at(2).toDouble());
-        if(msgContent.at(1)=="100")     {ui->label_message->setText("Máy lái sẵn sàng ");return;}
+        if(msgContent.at(1)=="100")     {ui->label_message->setText("Máy lái sẵn sàng ");return true;}
         else if(msgContent.at(1)=="2A"){labelKq=ui->label_mlkq_1; labelKl=ui->label_mlkl_1;}
         else if(msgContent.at(1)=="2B"){labelKq=ui->label_mlkq_2; labelKl=ui->label_mlkl_2;}
         else if(msgContent.at(1)=="2C"){labelKq=ui->label_mlkq_3; labelKl=ui->label_mlkl_3;}
@@ -314,12 +329,10 @@ void MainWindow::ProcessData(QString data)
         else if(msgContent.at(1)=="2H"){labelKq=ui->label_mlkq_8; labelKl=ui->label_mlkl_8;}
         else if(msgContent.at(1)=="2I"){labelKq=ui->label_mlkq_9; labelKl=ui->label_mlkl_9;}
         else if(msgContent.at(1)=="2J"){labelKq=ui->label_mlkq_10;labelKl=ui->label_mlkl_10;}
-        else return;
+        else return true;
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
-        double a= tesResult.value(keyname);
-        a=tesResult.value(keyname+"dm");
-        a= tesResult.value(keyname+"ss");
+
         bool result = (abs(tesResult.value(keyname)
                            -tesResult.value(keyname+"dm"))
                        - tesResult.value(keyname+"ss"))
@@ -399,7 +412,7 @@ void MainWindow::ProcessData(QString data)
         else if(msgContent.at(1)=="15")ui->label_message->setText("Hãy bấm DỪNG");
         else if(msgContent.at(1)=="16")ui->label_message->setText("Hãy bấm XÓA");
     }
-
+    return true;
 }
 bool MainWindow::openSerial(const QString &port, qint32 baudRate)
 {
@@ -416,4 +429,9 @@ void MainWindow::WriteSerial(QByteArray feedBackData)
 {
     serialPort.write(feedBackData);
     ui->textBrowser->append(QString::fromLatin1(feedBackData));
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    QApplication::exit();
 }

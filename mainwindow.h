@@ -19,11 +19,13 @@ private slots:
     void ProcessSerialData();
     void timerEvent(QTimerEvent *event);
     void keyPressEvent(QKeyEvent *event);
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString serialData;
     bool openSerial(const QString &port, qint32 baudRate);
-    void ProcessData(QString data);
+    bool ProcessData(QString data);
     void captureScreen();
     void WriteSerial(QByteArray feedBackData);
 };
