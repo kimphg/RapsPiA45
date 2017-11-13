@@ -21,12 +21,21 @@ private slots:
     void keyPressEvent(QKeyEvent *event);
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString serialData;
+    QList<int> captureIndex;
     bool openSerial(const QString &port, qint32 baudRate);
     bool ProcessData(QString data);
-    void captureScreen();
+    void captureScreen(int tabIndex);
     void WriteSerial(QByteArray feedBackData);
 };
 

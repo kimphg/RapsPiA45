@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
         else
         {
             WriteSerial("$PC100");
-            ui->label_message->setText(portname);
+            //ui->label_message->setText(portname);
             printf("\nSerial port active:");
             //fflushall();
             printf(portname.toStdString().data());
@@ -51,10 +51,12 @@ MainWindow::MainWindow(QWidget *parent) :
     tesResult.insert("$TBBA2Idm",27.0); tesResult.insert("$TBBA2Iss",1.3);
     tesResult.insert("$TBBA2Jdm",27.0); tesResult.insert("$TBBA2Jss",1.3);
     tesResult.insert("$TBBA2Kdm",12.6); tesResult.insert("$TBBA2Kss",0.6);
+    tesResult.insert("$TBBA2kdm",-12.6); tesResult.insert("$TBBA2kss",0.6);
     tesResult.insert("$TBBA2Ldm",20.0); tesResult.insert("$TBBA2Lss",1.0);
+    tesResult.insert("$TBBA2ldm",-20.0); tesResult.insert("$TBBA2lss",1.0);
     tesResult.insert("$TBBA2Mdm",20.0); tesResult.insert("$TBBA2Mss",1.0);
     tesResult.insert("$TBBA2Ndm",27.0); tesResult.insert("$TBBA2Nss",1.3);
-    tesResult.insert("$TBBA2Odm",-27.0);tesResult.insert("$TBBA2Oss",1.3);
+    tesResult.insert("$TBBA2Odm",27.0);tesResult.insert("$TBBA2Oss",1.3);
 
     tesResult.insert("$TBML2Adm",0.0); tesResult.insert("$TBML2Ass",1.0);
     tesResult.insert("$TBML2Bdm",0.0); tesResult.insert("$TBML2Bss",1.0);
@@ -66,15 +68,15 @@ MainWindow::MainWindow(QWidget *parent) :
     tesResult.insert("$TBML2Hdm",4.0); tesResult.insert("$TBML2Hss",1.0);
     tesResult.insert("$TBML2Idm",0.0); tesResult.insert("$TBML2Iss",1.1);
     tesResult.insert("$TBML2Jdm",0.0); tesResult.insert("$TBML2Jss",1.1);
-
+    startTimer(500);
 }
-int command = 0;
+int command = -1;
 void MainWindow::keyPressEvent(QKeyEvent *event)
 {
     int key = event->key();
     if(key == Qt::Key_S)
     {
-        startTimer(1000);
+
         command = 0;
     }
     else if(key == Qt::Key_1)
@@ -89,61 +91,74 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     {
         ui->tabWidget->setCurrentIndex(2);
     }
-    else if(key == Qt::Key_F1)
-    {
-        captureScreen();
-    }
+
 
 }
-void MainWindow::captureScreen()
+void MainWindow::captureScreen(int tabIndex)
 {
-    QScreen *screen = QGuiApplication::primaryScreen();
-    if (const QWindow *window = windowHandle())
-        screen = window->screen();
-    if (!screen)
-        return;
-    QApplication::beep();
+    captureIndex.push_back(tabIndex);
 
-    QPixmap originalPixmap = screen->grabWindow(0);
-    originalPixmap.save("screen.png");
 }
 void MainWindow::timerEvent(QTimerEvent *event)
 {
-    command++;
-    switch (command) {
-    case 1:
-        ProcessData("$KTTB,100,000000,*");
-        break;
-    case 2:
-        ProcessData("$TBBA,100,000000,*");//BA san sang
-        break;
-    case 3:
-        break;
-    case 4:
-        ProcessData("$SUTB,100,,*");//tham so BA 1
-        break;
-    case 5:
-        ProcessData("$SUTB,211,,*");//tham so BA 1
-        break;
-    case 6:
-        ProcessData("$TBBA,2A,+15.0,*");//tham so BA 1
-        break;//
-    case 7:
-        ProcessData("$TBBA,2B,+26.0,*");//tham so BA 2
-        break;
-    case 8:
-        captureScreen();
-        break;
-    case 9:
-        ProcessData("$TBML,100,000,*");//tham so BA 2
-        break;
-    case 10:
-        ProcessData("$TBML,2A,-20,*");//tham so BA 2
-        break;
-    default:
-        killTimer(event->timerId());
-        command = 0;
-        break;
+    if(command!=-1)
+    {command++;
+        switch (command) {
+        case 1:
+            ProcessData("$KTTB,100,000000,*");
+            break;
+        case 2:
+            ProcessData("$TBBA,100,000000,*");//BA san sang
+            break;
+        case 3:
+            break;
+        case 4:
+            ProcessData("$SUTB,100,,*");//tham so BA 1
+            break;
+        case 5:
+            ProcessData("$SUTB,211,,*");//tham so BA 1
+            break;
+        case 6:
+            ProcessData("$TBBA,2A,+15.0,*");//tham so BA 1
+            break;//
+        case 7:
+            ProcessData("$TBBA,2B,+26.0,*");//tham so BA 2
+            break;
+        case 8:
+
+            break;
+        case 9:
+            ProcessData("$TBML,100,000,*");//tham so BA 2
+            break;
+        case 10:
+            ProcessData("$TBML,2A,-20,*");//tham so BA 2
+            break;
+        default:
+            //killTimer(event->timerId());
+            command = -1;
+            break;
+        }
+    }
+    if(captureIndex.size())
+    {
+        int i = (captureIndex.at(captureIndex.size()-1));
+        QScreen *screen = QGuiApplication::primaryScreen();
+        if (const QWindow *window = windowHandle())
+            screen = window->screen();
+        if (!screen)
+            return;
+
+        //int oldIndex = this->ui->tabWidget->currentIndex();
+
+        this->ui->tabWidget->setCurrentIndex(i);
+        update();
+        QApplication::beep();
+
+        QPixmap originalPixmap = screen->grabWindow(0);
+        originalPixmap.save("screen"+QString::number(i) + ".jpg");
+
+        //this->ui->tabWidget->setCurrentIndex(oldIndex);
+        captureIndex.pop_back();
     }
 
 }
@@ -195,8 +210,8 @@ bool MainWindow::ProcessData(QString data)
         if(msgContent.at(1)=="100")     {ui->label_message->setText("Chọn thiết bị và chế độ kiểm tra: BA/Máy Lái ? Tự động/Từng bước?");}
         else if(msgContent.at(1)=="211"){ui->label_message->setText("Đã chọn BA");}
         else if(msgContent.at(1)=="212"){ui->label_message->setText("Đã chọn Máy lái");}
-        else if(msgContent.at(1)=="221"){ui->label_message->setText("Đã đặt chế độ tự động");}
-        else if(msgContent.at(1)=="222"){ui->label_message->setText("Đã đặt chế độ từng bước");}
+        else if(msgContent.at(1)=="221"){ui->label_message->setText("Đã đặt chế độ TỰ ĐỘNG");}
+        else if(msgContent.at(1)=="222"){ui->label_message->setText("Đã đặt chế độ TỪNG BƯỚC");}
 
 
     }
@@ -262,10 +277,20 @@ bool MainWindow::ProcessData(QString data)
             labelKq=ui->label_bakq_11;
             labelKl=ui->label_bakl_11;
         }
+        else if(msgContent.at(1)=="2k")
+        {
+            labelKq=ui->label_bakq_11_2;
+            labelKl=ui->label_bakl_11_2;
+        }
         else if(msgContent.at(1)=="2L")
         {
             labelKq=ui->label_bakq_12;
             labelKl=ui->label_bakl_12;
+        }
+        else if(msgContent.at(1)=="2l")
+        {
+            labelKq=ui->label_bakq_12_2;
+            labelKl=ui->label_bakl_12_2;
         }
         else if(msgContent.at(1)=="2M")
         {
@@ -284,7 +309,7 @@ bool MainWindow::ProcessData(QString data)
         }
         else
         {
-            return false;
+            return true;
         }
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
@@ -433,5 +458,113 @@ void MainWindow::WriteSerial(QByteArray feedBackData)
 
 void MainWindow::on_pushButton_clicked()
 {
-    QApplication::exit();
+    captureScreen(2);
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    captureScreen(ui->tabWidget->currentIndex());
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    captureScreen(0);
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    if(ui->tabWidget->currentIndex()==2)
+    {
+        ui->label_mlkq_1->setText("");
+    ui->label_mlkq_2->setText("");
+    ui->label_mlkq_3->setText("");
+    ui->label_mlkq_4->setText("");
+    ui->label_mlkq_5->setText("");
+    ui->label_mlkq_6->setText("");
+    ui->label_mlkq_7->setText("");
+    ui->label_mlkq_8->setText("");
+    ui->label_mlkq_9->setText("");
+    ui->label_mlkq_10->setText("");
+    ui->label_mlkl_1->setText("");
+    ui->label_mlkl_2->setText("");
+    ui->label_mlkl_3->setText("");
+    ui->label_mlkl_4->setText("");
+    ui->label_mlkl_5->setText("");
+    ui->label_mlkl_6->setText("");
+    ui->label_mlkl_7->setText("");
+    ui->label_mlkl_8->setText("");
+    ui->label_mlkl_9->setText("");
+    ui->label_mlkl_10->setText("");
+    ui->label_mlkl_1->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_2->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_3->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_4->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_5->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_6->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_7->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_8->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_mlkl_9->setStyleSheet("QLabel { background-color : white;  }");
+   ui->label_mlkl_10->setStyleSheet("QLabel { background-color : white;  }");
+    }
+
+    if(ui->tabWidget->currentIndex()==1)
+    {
+    ui->label_bakq_1->setText("");
+    ui->label_bakq_2->setText("");
+    ui->label_bakq_3->setText("");
+    ui->label_bakq_4->setText("");
+    ui->label_bakq_5->setText("");
+    ui->label_bakq_6->setText("");
+    ui->label_bakq_7->setText("");
+    ui->label_bakq_8->setText("");
+    ui->label_bakq_9->setText("");
+    ui->label_bakq_10->setText("");
+    ui->label_bakq_11->setText("");
+    ui->label_bakq_11_2->setText("");
+    ui->label_bakq_12_2->setText("");
+    ui->label_bakq_12->setText("");
+    ui->label_bakq_13->setText("");
+    ui->label_bakq_14->setText("");
+    ui->label_bakq_15->setText("");
+    ui->label_bakl_1->setText("");
+    ui->label_bakl_2->setText("");
+    ui->label_bakl_3->setText("");
+    ui->label_bakl_4->setText("");
+    ui->label_bakl_5->setText("");
+    ui->label_bakl_6->setText("");
+    ui->label_bakl_7->setText("");
+    ui->label_bakl_8->setText("");
+    ui->label_bakl_9->setText("");
+    ui->label_bakl_10->setText("");
+    ui->label_bakl_11->setText("");
+    ui->label_bakl_11_2->setText("");
+    ui->label_bakl_12_2->setText("");
+    ui->label_bakl_12->setText("");
+    ui->label_bakl_13->setText("");
+    ui->label_bakl_14->setText("");
+    ui->label_bakl_15->setText("");
+    ui->label_bakl_1->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_2->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_3->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_4->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_5->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_6->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_7->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_8->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_9->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_10->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_11->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_11_2->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_12_2->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_12->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_13->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_14->setStyleSheet("QLabel { background-color : white;  }");
+    ui->label_bakl_15->setStyleSheet("QLabel { background-color : white;  }");
+    }
+
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    on_pushButton_4_clicked();
 }
