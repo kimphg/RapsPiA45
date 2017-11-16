@@ -44,7 +44,7 @@ border-width: 2px;
 border-color: rgb(120, 190, 200);</string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="elideMode">
        <enum>Qt::ElideLeft</enum>
@@ -61,7 +61,7 @@ border-color: rgb(120, 190, 200);</string>
       <property name="movable">
        <bool>false</bool>
       </property>
-      <property name="tabBarAutoHide" stdset="0">
+      <property name="tabBarAutoHide">
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab">
@@ -259,6 +259,9 @@ border-color: rgb(120, 190, 200);</string>
             <bold>true</bold>
            </font>
           </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(170, 56, 0);</string>
+          </property>
           <property name="text">
            <string>Kiểm tra thiết bị</string>
           </property>
@@ -274,6 +277,871 @@ border-color: rgb(120, 190, 200);</string>
         <string>Đo BA</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
+        <item row="23" column="1">
+         <widget class="QLabel" name="label_badm_12">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>+20 | -20</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="2">
+         <widget class="QLabel" name="label_bacp_12">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="0">
+         <widget class="QLabel" name="label_27">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>13. Chuyển mạch tải theo mạch + 20 V</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="1">
+         <widget class="QLabel" name="label_badm_13">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>20</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="2">
+         <widget class="QLabel" name="label_bacp_13">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="0">
+         <widget class="QLabel" name="label_28">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>14. Chuyển mạch nguồn +27V vào khối nguồn</string>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="1">
+         <widget class="QLabel" name="label_badm_14">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="2">
+         <widget class="QLabel" name="label_bacp_14">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="0">
+         <widget class="QLabel" name="label_29">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>15. Chuyển mạch nguồn 27 V cho đầu tự dẫn</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="1">
+         <widget class="QLabel" name="label_badm_15">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="2">
+         <widget class="QLabel" name="label_bacp_15">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="4">
+         <widget class="QLabel" name="label_bakq_11">
+          <property name="maximumSize">
+           <size>
+            <width>90</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="4">
+         <widget class="QLabel" name="label_bakq_12">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="5" colspan="2">
+         <widget class="QLabel" name="label_bakl_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5" colspan="2">
+         <widget class="QLabel" name="label_bakl_1">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="5" colspan="2">
+         <widget class="QLabel" name="label_bakl_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="6">
+         <widget class="QLabel" name="label_bakl_11">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="6">
+         <widget class="QLabel" name="label_bakl_12">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="5" colspan="2">
+         <widget class="QLabel" name="label_bakl_5">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="5" colspan="2">
+         <widget class="QLabel" name="label_120">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Kết luận</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_6">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_10">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="3">
+         <widget class="QLabel" name="label_bakq_11_2">
+          <property name="maximumSize">
+           <size>
+            <width>90</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="5" colspan="2">
+         <widget class="QLabel" name="label_bakl_6">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_15">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3" colspan="2">
+         <widget class="QLabel" name="label_34">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Kết quả đo</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_5">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_4">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="5" colspan="2">
+         <widget class="QLabel" name="label_bakl_7">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_7">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_9">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_14">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="3" colspan="2">
+         <widget class="QLabel" name="label_bakq_13">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>--</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2" colspan="7">
+         <widget class="QFrame" name="frame">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border-width :0px;</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_71">
+             <property name="font">
+              <font>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(170, 56, 0);</string>
+             </property>
+             <property name="text">
+              <string>Tên SP : Khối BA</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1. Пуск</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_badm_1">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="label_bacp_1">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>2. Пуск</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="label_21">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>7. Откл.РВ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QLabel" name="label_badm_7">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="2">
+         <widget class="QLabel" name="label_bacp_7">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0">
+         <widget class="QLabel" name="label_22">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>8. ПИМ</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="1">
+         <widget class="QLabel" name="llabel_badm_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>&gt;18</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="2">
+         <widget class="QLabel" name="label_bacp_8">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="0">
+         <widget class="QLabel" name="label_23">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>9. КДЦ </string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="1">
+         <widget class="QLabel" name="label_badm_9">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="2">
+         <widget class="QLabel" name="label_bacp_9">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="0">
+         <widget class="QLabel" name="label_24">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>10. B2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="1">
+         <widget class="QLabel" name="label_badm_10">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>27</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="2">
+         <widget class="QLabel" name="label_bacp_10">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>1.3</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="0">
+         <widget class="QLabel" name="label_25">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>11. Chuyển mạch nguồn ±12,6 V</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="1">
+         <widget class="QLabel" name="label_badm_11">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>+12.6 | -12.6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="2">
+         <widget class="QLabel" name="label_bacp_11">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>0.6</string>
+          </property>
+         </widget>
+        </item>
+        <item row="23" column="0">
+         <widget class="QLabel" name="label_26">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>12. Chuyển mạch nguồn ±20 V cho đầu tự dẫn</string>
+          </property>
+         </widget>
+        </item>
         <item row="17" column="5" colspan="2">
          <widget class="QLabel" name="label_bakl_9">
           <property name="font">
@@ -290,7 +1158,7 @@ border-color: rgb(120, 190, 200);</string>
          </widget>
         </item>
         <item row="31" column="3" colspan="4">
-         <widget class="QLabel" name="label_bakq_16">
+         <widget class="QLabel" name="label_bakq_all">
           <property name="font">
            <font>
             <pointsize>12</pointsize>
@@ -673,907 +1541,6 @@ border-color: rgb(120, 190, 200);</string>
           </property>
           <property name="text">
            <string>Sai số cho phép</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1. Пуск</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1">
-         <widget class="QLabel" name="label_badm_1">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>27</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="2">
-         <widget class="QLabel" name="label_bacp_1">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="label_18">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>2. Пуск</string>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="0">
-         <widget class="QLabel" name="label_21">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>7. Откл.РВ</string>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="1">
-         <widget class="QLabel" name="label_badm_7">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>27</string>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="2">
-         <widget class="QLabel" name="label_bacp_7">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="15" column="0">
-         <widget class="QLabel" name="label_22">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>8. ПИМ</string>
-          </property>
-         </widget>
-        </item>
-        <item row="15" column="1">
-         <widget class="QLabel" name="llabel_badm_8">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>&gt;18</string>
-          </property>
-         </widget>
-        </item>
-        <item row="15" column="2">
-         <widget class="QLabel" name="label_bacp_8">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item row="17" column="0">
-         <widget class="QLabel" name="label_23">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>9. КДЦ </string>
-          </property>
-         </widget>
-        </item>
-        <item row="17" column="1">
-         <widget class="QLabel" name="label_badm_9">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>27</string>
-          </property>
-         </widget>
-        </item>
-        <item row="17" column="2">
-         <widget class="QLabel" name="label_bacp_9">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="19" column="0">
-         <widget class="QLabel" name="label_24">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>10. B2</string>
-          </property>
-         </widget>
-        </item>
-        <item row="19" column="1">
-         <widget class="QLabel" name="label_badm_10">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>27</string>
-          </property>
-         </widget>
-        </item>
-        <item row="19" column="2">
-         <widget class="QLabel" name="label_bacp_10">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>0.3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="0">
-         <widget class="QLabel" name="label_25">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>11. Chuyển mạch nguồn ±12,6 V</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="1">
-         <widget class="QLabel" name="label_badm_11">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>+12.6 | -12.6</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="2">
-         <widget class="QLabel" name="label_bacp_11">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>0.6</string>
-          </property>
-         </widget>
-        </item>
-        <item row="23" column="0">
-         <widget class="QLabel" name="label_26">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>12. Chuyển mạch nguồn ±20 V cho đầu tự dẫn</string>
-          </property>
-         </widget>
-        </item>
-        <item row="23" column="1">
-         <widget class="QLabel" name="label_badm_12">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>+20 | -20</string>
-          </property>
-         </widget>
-        </item>
-        <item row="23" column="2">
-         <widget class="QLabel" name="label_bacp_12">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.0</string>
-          </property>
-         </widget>
-        </item>
-        <item row="25" column="0">
-         <widget class="QLabel" name="label_27">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>13. Chuyển mạch tải theo mạch + 20 V</string>
-          </property>
-         </widget>
-        </item>
-        <item row="25" column="1">
-         <widget class="QLabel" name="label_badm_13">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>20</string>
-          </property>
-         </widget>
-        </item>
-        <item row="25" column="2">
-         <widget class="QLabel" name="label_bacp_13">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.0</string>
-          </property>
-         </widget>
-        </item>
-        <item row="27" column="0">
-         <widget class="QLabel" name="label_28">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>14. Chuyển mạch nguồn +27V vào khối nguồn</string>
-          </property>
-         </widget>
-        </item>
-        <item row="27" column="1">
-         <widget class="QLabel" name="label_badm_14">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>27</string>
-          </property>
-         </widget>
-        </item>
-        <item row="27" column="2">
-         <widget class="QLabel" name="label_bacp_14">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="29" column="0">
-         <widget class="QLabel" name="label_29">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>15. Chuyển mạch nguồn 27 V cho đầu tự dẫn</string>
-          </property>
-         </widget>
-        </item>
-        <item row="29" column="1">
-         <widget class="QLabel" name="label_badm_15">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>27</string>
-          </property>
-         </widget>
-        </item>
-        <item row="29" column="2">
-         <widget class="QLabel" name="label_bacp_15">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>1.3</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="4">
-         <widget class="QLabel" name="label_bakq_11">
-          <property name="maximumSize">
-           <size>
-            <width>90</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="23" column="4">
-         <widget class="QLabel" name="label_bakq_12">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0" rowspan="2" colspan="7">
-         <widget class="QFrame" name="frame">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">border-width :0px;</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_6">
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_71">
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Tên SP : Khối BA</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="label_72">
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Số hiệu SP :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="3">
-            <widget class="QLabel" name="label_35">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string>KẾT QUẢ KIỂM TRA</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLabel" name="label_73">
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Ngày kiểm tra :</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item row="7" column="5" colspan="2">
-         <widget class="QLabel" name="label_bakl_4">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="5" colspan="2">
-         <widget class="QLabel" name="label_bakl_1">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="15" column="5" colspan="2">
-         <widget class="QLabel" name="label_bakl_8">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="6">
-         <widget class="QLabel" name="label_bakl_11">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="23" column="6">
-         <widget class="QLabel" name="label_bakl_12">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="5" colspan="2">
-         <widget class="QLabel" name="label_bakl_5">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="5" colspan="2">
-         <widget class="QLabel" name="label_120">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Kết luận</string>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_6">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="19" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_10">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="21" column="3">
-         <widget class="QLabel" name="label_bakq_11_2">
-          <property name="maximumSize">
-           <size>
-            <width>90</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="5" colspan="2">
-         <widget class="QLabel" name="label_bakl_6">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="29" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_15">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="15" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_8">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_2">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="3" colspan="2">
-         <widget class="QLabel" name="label_34">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Kết quả đo</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_5">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_4">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="5" colspan="2">
-         <widget class="QLabel" name="label_bakl_7">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="6" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_3">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="13" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_7">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="17" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_9">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="27" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_14">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
-          </property>
-         </widget>
-        </item>
-        <item row="25" column="3" colspan="2">
-         <widget class="QLabel" name="label_bakq_13">
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="text">
-           <string>--</string>
           </property>
          </widget>
         </item>
@@ -2420,7 +2387,7 @@ border-color: rgb(120, 190, 200);</string>
          </widget>
         </item>
         <item row="12" column="3" colspan="2">
-         <widget class="QLabel" name="label_mlkq_11">
+         <widget class="QLabel" name="label_mlkq_all">
           <property name="font">
            <font>
             <pointsize>16</pointsize>
@@ -2477,56 +2444,14 @@ border-color: rgb(120, 190, 200);</string>
                <bold>true</bold>
               </font>
              </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(170, 56, 0);</string>
+             </property>
              <property name="text">
               <string>Tên SP :  Khối máy lái</string>
              </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLabel" name="label_82">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Số hiệu SP :</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" colspan="3">
-            <widget class="QLabel" name="label_83">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string>KẾT QUẢ KIỂM TRA</string>
-             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QLabel" name="label_84">
-             <property name="font">
-              <font>
-               <pointsize>16</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Ngày kiểm tra :</string>
              </property>
             </widget>
            </item>
@@ -2672,6 +2597,377 @@ border-color: rgb(120, 190, 200);</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QFrame" name="frame_4">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_86">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_85">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2" colspan="4">
+        <widget class="QLabel" name="label_83">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>KẾT QUẢ KIỂM TRA</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLineEdit" name="lineEdit">
+         <property name="palette">
+          <palette>
+           <active>
+            <colorrole role="Button">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Base">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Window">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </active>
+           <inactive>
+            <colorrole role="Button">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Base">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Window">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </inactive>
+           <disabled>
+            <colorrole role="Button">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Base">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Window">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </disabled>
+          </palette>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <widget class="QLineEdit" name="lineEdit_2">
+         <property name="palette">
+          <palette>
+           <active>
+            <colorrole role="Button">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Base">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Window">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </active>
+           <inactive>
+            <colorrole role="Button">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Base">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Window">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </inactive>
+           <disabled>
+            <colorrole role="Button">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Base">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+            <colorrole role="Window">
+             <brush brushstyle="SolidPattern">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </colorrole>
+           </disabled>
+          </palette>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="label_82">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Số hiệu SP :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QLabel" name="label_84">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>                     Ngày kiểm tra :</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="6">
+        <widget class="QLabel" name="label_87">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
          </property>
         </widget>
        </item>

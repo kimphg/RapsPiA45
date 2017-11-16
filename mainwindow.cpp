@@ -91,6 +91,26 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
     {
         ui->tabWidget->setCurrentIndex(2);
     }
+    else if(key== Qt::Key_4)
+    {
+        ui->label_bakl_1->setText("Đạt");
+        ui->label_bakl_2->setText("Đạt");
+        ui->label_bakl_3->setText("Đạt");
+        ui->label_bakl_4->setText("Đạt");
+        ui->label_bakl_5->setText("Đạt");
+        ui->label_bakl_6->setText("Đạt");
+        ui->label_bakl_7->setText("Đạt");
+        ui->label_bakl_8->setText("Đạt");
+        ui->label_bakl_9->setText("Đạt");
+       ui->label_bakl_10->setText("Đạt");
+       ui->label_bakl_11->setText("Đạt");
+     ui->label_bakl_11_2->setText("Đạt");
+       ui->label_bakl_12->setText("Đạt");
+     ui->label_bakl_12_2->setText("Đạt");
+       ui->label_bakl_13->setText("Đạt");
+       ui->label_bakl_14->setText("Đạt");
+       ui->label_bakl_15->setText("Đạt");
+    }
 
 
 }
@@ -119,13 +139,13 @@ void MainWindow::timerEvent(QTimerEvent *event)
             ProcessData("$SUTB,211,,*");//tham so BA 1
             break;
         case 6:
-            ProcessData("$TBBA,2A,+15.0,*");//tham so BA 1
+            //ProcessData("$TBBA,2A,+15.0,*");//tham so BA 1
             break;//
         case 7:
             ProcessData("$TBBA,2B,+26.0,*");//tham so BA 2
             break;
         case 8:
-
+            ProcessData("$TBBA,2Z,*");//tham so BA 2
             break;
         case 9:
             ProcessData("$TBML,100,000,*");//tham so BA 2
@@ -155,9 +175,11 @@ void MainWindow::timerEvent(QTimerEvent *event)
         QApplication::beep();
 
         QPixmap originalPixmap = screen->grabWindow(0);
-        originalPixmap.save("screen"+QString::number(i) + ".jpg");
 
-        //this->ui->tabWidget->setCurrentIndex(oldIndex);
+        QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
+                                    "*.png",
+                                    tr("Images (*.png *.jpg)"));
+        originalPixmap.save(fileName);
         captureIndex.pop_back();
     }
 
@@ -170,11 +192,8 @@ void MainWindow::ProcessSerialData()
 {
     if(serialPort.isOpen())
     {
-
-
         serialData.append(serialPort.readAll());
         if(ProcessData(serialData))serialData.clear();
-
     }
 }
 bool MainWindow::ProcessData(QString data)
@@ -284,7 +303,7 @@ bool MainWindow::ProcessData(QString data)
         }
         else if(msgContent.at(1)=="2L")
         {
-            labelKq=ui->label_bakq_12;
+            labelKq=ui->label_bakq_12;;
             labelKl=ui->label_bakl_12;
         }
         else if(msgContent.at(1)=="2l")
@@ -306,6 +325,41 @@ bool MainWindow::ProcessData(QString data)
         {
             labelKq=ui->label_bakq_15;
             labelKl=ui->label_bakl_15;
+        }
+        else if(msgContent.at(1)=="2Z")
+        {
+
+
+              if((  ui->label_bakl_1->text()=="Đạt"  )&&
+                 (  ui->label_bakl_2->text()=="Đạt"  )&&
+                 (  ui->label_bakl_3->text()=="Đạt"  )&&
+                 (  ui->label_bakl_4->text()=="Đạt"  )&&
+                 (  ui->label_bakl_5->text()=="Đạt"  )&&
+                 (  ui->label_bakl_6->text()=="Đạt"  )&&
+                 (  ui->label_bakl_7->text()=="Đạt"  )&&
+                 (  ui->label_bakl_8->text()=="Đạt"  )&&
+                 (  ui->label_bakl_9->text()=="Đạt"  )&&
+                 (  ui->label_bakl_10->text()=="Đạt"  )&&
+                 (  ui->label_bakl_11->text()=="Đạt"  )&&
+                 (  ui->label_bakl_11_2->text()=="Đạt"  )&&
+                 (  ui->label_bakl_12->text()=="Đạt"  )&&
+                 (  ui->label_bakl_12_2->text()=="Đạt"  )&&
+                 (  ui->label_bakl_13->text()=="Đạt"  )&&
+                 (  ui->label_bakl_14->text()=="Đạt"  )&&
+                 (  ui->label_bakl_15->text()=="Đạt"  ))
+              {
+
+                  ui->label_bakq_all->setText("Đạt");
+                  ui->label_bakq_all->setStyleSheet("QLabel { background-color : green;  }");
+              }
+              else
+              {
+                  ui->label_bakq_all->setText("Không đạt");
+                  ui->label_bakq_all->setStyleSheet("QLabel { background-color : red;  }");
+              }
+              return true;
+
+
         }
         else
         {
@@ -354,6 +408,31 @@ bool MainWindow::ProcessData(QString data)
         else if(msgContent.at(1)=="2H"){labelKq=ui->label_mlkq_8; labelKl=ui->label_mlkl_8;}
         else if(msgContent.at(1)=="2I"){labelKq=ui->label_mlkq_9; labelKl=ui->label_mlkl_9;}
         else if(msgContent.at(1)=="2J"){labelKq=ui->label_mlkq_10;labelKl=ui->label_mlkl_10;}
+        else if(msgContent.at(1)=="2Z")
+        {
+          if((  ui->label_mlkl_1->text()=="Đạt"  )&&
+          (  ui->label_mlkl_2->text()=="Đạt"  )&&
+          (  ui->label_mlkl_3->text()=="Đạt"  )&&
+          (  ui->label_mlkl_4->text()=="Đạt"  )&&
+          (  ui->label_mlkl_5->text()=="Đạt"  )&&
+          (  ui->label_mlkl_6->text()=="Đạt"  )&&
+          (  ui->label_mlkl_7->text()=="Đạt"  )&&
+          (  ui->label_mlkl_8->text()=="Đạt"  )&&
+          (  ui->label_mlkl_9->text()=="Đạt"  )&&
+          ( ui->label_mlkl_10->text()=="Đạt"  ))
+          {
+
+              ui->label_mlkq_all->setText("Đạt");
+              ui->label_mlkq_all->setStyleSheet("QLabel { background-color : green;  }");
+          }
+          else
+          {
+              ui->label_mlkq_all->setText("Không đạt");
+              ui->label_mlkq_all->setStyleSheet("QLabel { background-color : red;  }");
+          }
+          return true;
+
+        }
         else return true;
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
@@ -364,6 +443,7 @@ bool MainWindow::ProcessData(QString data)
                 <=0;
         if(result)
         {
+
             QByteArray feedBackData = QString(msgContent.at(0)+","
                                               +msgContent.at(1)+","
                                               +"1"+",").toLatin1();
@@ -437,6 +517,7 @@ bool MainWindow::ProcessData(QString data)
         else if(msgContent.at(1)=="15")ui->label_message->setText("Hãy bấm DỪNG");
         else if(msgContent.at(1)=="16")ui->label_message->setText("Hãy bấm XÓA");
     }
+
     return true;
 }
 bool MainWindow::openSerial(const QString &port, qint32 baudRate)
@@ -456,20 +537,14 @@ void MainWindow::WriteSerial(QByteArray feedBackData)
     ui->textBrowser->append(QString::fromLatin1(feedBackData));
 }
 
-void MainWindow::on_pushButton_clicked()
-{
-    captureScreen(2);
-}
-
 void MainWindow::on_pushButton_2_clicked()
+
 {
+
     captureScreen(ui->tabWidget->currentIndex());
 }
 
-void MainWindow::on_pushButton_3_clicked()
-{
-    captureScreen(0);
-}
+
 
 void MainWindow::on_pushButton_4_clicked()
 {
@@ -564,7 +639,5 @@ void MainWindow::on_pushButton_4_clicked()
 
 }
 
-void MainWindow::on_pushButton_5_clicked()
-{
-    on_pushButton_4_clicked();
-}
+
+// và, lệnh, bật ngắt, ô ố ồ ộ, ê ế ề ệ, a á à ạ, â ấ ậ, ơ ớ ờ ợ, o ó ọ o
