@@ -177,7 +177,7 @@ void MainWindow::timerEvent(QTimerEvent *event)
         QPixmap originalPixmap = screen->grabWindow(0);
 
         QString fileName = QFileDialog::getSaveFileName(this, tr("Save File"),
-                                    "*.png",
+                                    ui->lineEdit->text()+ui->lineEdit_2->text(),
                                     tr("Images (*.png *.jpg)"));
         originalPixmap.save(fileName);
         captureIndex.pop_back();
