@@ -151,7 +151,10 @@ void MainWindow::timerEvent(QTimerEvent *event)
             ProcessData("$TBML,100,000,*");//tham so BA 2
             break;
         case 10:
-            ProcessData("$TBML,2A,-20,*");//tham so BA 2
+            ProcessData("$TBML,2A,-1.2,*");//tham so BA 2
+            break;
+        case 11:
+            ProcessData("$TBML,2B,-1.1,*");//tham so BA 2
             break;
         default:
             //killTimer(event->timerId());
@@ -436,11 +439,9 @@ bool MainWindow::ProcessData(QString data)
         else return true;
         labelKq->setText(msgContent.at(2));
         QString keyname = msgContent.at(0)+msgContent.at(1);
-
-        bool result = (abs(tesResult.value(keyname)
-                           -tesResult.value(keyname+"dm"))
-                       - tesResult.value(keyname+"ss"))
-                <=0;
+        double diff = tesResult.value(keyname)-tesResult.value(keyname+"dm");
+        if(diff<0)diff=-diff;
+        bool result = diff<tesResult.value(keyname+"ss");
         if(result)
         {
 
